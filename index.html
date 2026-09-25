@@ -702,10 +702,11 @@
       background: linear-gradient(145deg, #0e274a 0%, #07172c 100%);
       border: 1px solid var(--border-accent);
       border-radius: var(--radius-lg);
-      padding: 3.5rem;
+      padding: 3.5rem 2.8rem;
       box-shadow: var(--shadow-card), var(--shadow-glow);
       text-align: center;
-      max-width: 960px;
+      max-width: 1140px;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -726,21 +727,22 @@
 
     .contact-channels {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
       margin-bottom: 2.8rem;
       text-align: left;
     }
 
     .channel-box {
-      background: rgba(4, 13, 26, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(4, 13, 26, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-md);
-      padding: 1.5rem 1.3rem;
+      padding: 1.5rem 1.4rem;
       transition: var(--transition);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      min-width: 0;
     }
 
     .channel-box:hover {
@@ -774,14 +776,16 @@
       color: var(--gold-primary);
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      white-space: nowrap;
     }
 
     .channel-value {
-      font-size: 0.95rem;
+      font-size: clamp(0.85rem, 1.1vw, 0.95rem);
       font-weight: 600;
       color: var(--text-white);
-      word-break: break-all;
+      white-space: nowrap;
       margin-bottom: 1rem;
+      letter-spacing: -0.01em;
     }
 
     .channel-link {
@@ -831,10 +835,13 @@
       .cred-grid,
       .services-grid,
       .approach-steps,
-      .contact-channels,
       .ticker-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+      }
+      .contact-channels {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
       }
       .ticker-grid {
         grid-template-columns: repeat(2, 1fr);
