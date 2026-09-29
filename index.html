@@ -828,6 +828,34 @@
       color: var(--text-white);
     }
 
+    .footer-copy {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .visitor-badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+    }
+
+    .visitor-badge {
+      height: 18px;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      vertical-align: middle;
+      opacity: 0.85;
+      transition: var(--transition);
+    }
+
+    .visitor-badge:hover {
+      opacity: 1;
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+    }
+
     /* Mobile Responsive */
     @media (max-width: 900px) {
       .hero-grid,
@@ -1247,8 +1275,11 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="shell footer-row">
-      <div>
-        <strong>Nusrath Mohammed</strong> &bull; Senior Enterprise Data &amp; AI Advisor &bull; &copy; 2026 All Rights Reserved
+      <div class="footer-copy">
+        <span><strong>Nusrath Mohammed</strong> &bull; Senior Enterprise Data &amp; AI Advisor &bull; &copy; 2026 All Rights Reserved</span>
+        <span class="visitor-badge-wrap" title="Total page visits">
+          <img src="https://hits.sh/nusrathmohammed.github.io.svg?style=flat-square&label=Visitors&color=d4af37&labelColor=08172b" alt="Page Visits Counter" class="visitor-badge" />
+        </span>
       </div>
       <div class="footer-links">
         <a href="tel:+16307071046">+1 (630) 707-1046</a>
