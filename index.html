@@ -504,6 +504,140 @@
       color: #cbd5e1;
     }
 
+    /* Featured Media / Video Section */
+    .media-section {
+      background: var(--bg-darker);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .media-card {
+      background: linear-gradient(145deg, rgba(8, 23, 43, 0.95) 0%, rgba(4, 13, 26, 0.98) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.8rem;
+      box-shadow: var(--shadow-card), 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .video-responsive {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      border: 2px solid rgba(212, 175, 55, 0.45);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), 0 0 25px rgba(212, 175, 55, 0.12);
+      background: #000;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-caption {
+      margin-top: 0.9rem;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+    }
+
+    .video-caption span {
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .media-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--gold-light);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+    }
+
+    h2.media-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 2.6vw, 2.35rem);
+      font-weight: 600;
+      color: var(--text-white);
+      line-height: 1.18;
+      margin-bottom: 0.95rem;
+      letter-spacing: -0.02em;
+    }
+
+    .media-host {
+      font-size: 0.95rem;
+      color: var(--gold-light);
+      margin-bottom: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .media-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+    }
+
+    .media-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.6rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.86rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .highlight-bullet {
+      color: var(--gold-primary);
+      font-size: 1.1rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .media-action {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
     /* Offerings Grid */
     .services-grid {
       display: grid;
@@ -860,6 +994,7 @@
     @media (max-width: 900px) {
       .hero-grid,
       .about-grid,
+      .media-grid,
       .cred-grid,
       .services-grid,
       .approach-steps,
@@ -874,7 +1009,8 @@
       .ticker-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .contact-card {
+      .contact-card,
+      .media-card {
         padding: 2.2rem 1.5rem;
       }
       .portrait-frame {
@@ -913,6 +1049,7 @@
         </a>
         <ul class="nav-menu">
           <li><a href="#about">About</a></li>
+          <li><a href="#insights">Insights</a></li>
           <li><a href="#offerings">Offerings</a></li>
           <li><a href="#approach">Approach</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -1017,6 +1154,70 @@
             "Advisory grounded in real-world delivery — not slide decks alone."
           </div>
           <p>Her approach bridges boardroom priorities with the rigorous controls, architectural discipline, and cross-functional teams needed to produce audit-ready, high-confidence business results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Executive Interview / Thought Leadership Section -->
+  <section class="section media-section" id="insights">
+    <div class="shell">
+      <div class="media-card">
+        <div class="media-grid">
+          <!-- Video Embed Column -->
+          <div class="video-container">
+            <div class="video-responsive">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/rBZgm-pzz30" 
+                title="Dave Vellante interviews Nusrath Mohammed at CDOIQ on theCUBE" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-caption">
+              <span>theCUBE Coverage</span> &bull; CDOIQ Symposium &bull; Cambridge, MA
+            </div>
+          </div>
+
+          <!-- Video Context & Takeaways Column -->
+          <div class="media-content">
+            <div class="media-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Executive Thought Leadership
+            </div>
+            <h2 class="media-title">Navigating Modern Data Governance &amp; Enterprise GenAI</h2>
+            <p class="media-host">
+              <strong>Dave Vellante</strong> from <strong>theCUBE</strong> interviews <strong>Nusrath Mohammed</strong> at the CDOIQ Symposium in Cambridge, Massachusetts.
+            </p>
+            <p class="media-desc">
+              A strategic discussion on the evolving landscape of enterprise data management, resolving foundational data debt, and establishing trustworthy governance models necessary to scale Generative AI.
+            </p>
+
+            <div class="media-highlights">
+              <div class="highlight-item">
+                <span class="highlight-bullet">&bull;</span>
+                <div><strong>Data Debt &amp; Architecture:</strong> Modernizing data pipelines and retiring fragmented legacy structures.</div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-bullet">&bull;</span>
+                <div><strong>Pragmatic Governance:</strong> Designing stewardship models that accelerate business execution rather than stall it.</div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-bullet">&bull;</span>
+                <div><strong>Enterprise AI Readiness:</strong> Ensuring data quality, lineage, and compliance guardrails keep pace with AI ambitions.</div>
+              </div>
+            </div>
+
+            <div class="media-action">
+              <a href="https://www.youtube.com/watch?v=rBZgm-pzz30" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.86rem; padding: 0.65rem 1.25rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #ff0000; flex-shrink: 0;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <span>Watch on YouTube &rarr;</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
