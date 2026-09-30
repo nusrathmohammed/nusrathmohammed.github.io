@@ -824,6 +824,61 @@
       flex-shrink: 0;
     }
 
+    .academic-item {
+      padding: 0.95rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .academic-item:last-child {
+      border-bottom: none;
+    }
+
+    .academic-degree {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-white);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .academic-school {
+      font-size: 0.86rem;
+      color: var(--gold-light);
+      margin-top: 0.15rem;
+    }
+
+    .academic-focus {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 0.2rem;
+    }
+
+    .cred-footer-link {
+      margin-top: 1.4rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .cred-verify-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      transition: var(--transition);
+    }
+
+    .cred-verify-link:hover {
+      color: var(--text-white);
+      transform: translateX(2px);
+    }
+
     /* CONTACT SECTION - HERO CALLOUT */
     .contact-section {
       background: radial-gradient(circle at 50% 10%, rgba(212, 175, 55, 0.08) 0%, transparent 70%),
@@ -1125,8 +1180,8 @@
           <div class="ticker-lbl">Operating model, readiness &amp; data governance guardrails</div>
         </div>
         <div class="ticker-item">
-          <div class="ticker-val">Dual Master's &amp; Wharton</div>
-          <div class="ticker-lbl">MBA, MS Information Science &amp; CTO Program Cohort</div>
+          <div class="ticker-val">Wharton, MBA &amp; MSIS</div>
+          <div class="ticker-lbl">CTO Cohort, MBA, MS Information Science &amp; BS Bioengineering</div>
         </div>
       </div>
     </div>
@@ -1382,26 +1437,48 @@
         <div class="cred-box">
           <h3>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold-primary);"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            Academic &amp; Executive Credentials
+            Executive &amp; Academic Foundation
           </h3>
-          <ul class="cred-list">
-            <li>
-              <span class="cred-icon">&bull;</span>
-              <span><strong>Wharton Executive Education:</strong> Chief Technology Officer (CTO) Program Cohort Member.</span>
-            </li>
-            <li>
-              <span class="cred-icon">&bull;</span>
-              <span><strong>Master of Business Administration (MBA):</strong> Stuart School of Business, Illinois Institute of Technology.</span>
-            </li>
-            <li>
-              <span class="cred-icon">&bull;</span>
-              <span><strong>Master of Science in Information Science (MSIS):</strong> University of Arkansas at Little Rock.</span>
-            </li>
-            <li>
-              <span class="cred-icon">&bull;</span>
-              <span><strong>Executive Delivery Leadership:</strong> Over two decades guiding enterprise teams through mission-critical transformations.</span>
-            </li>
-          </ul>
+          <div class="academic-list">
+            <div class="academic-item">
+              <div class="academic-degree">
+                <span>Chief Technology Officer (CTO) Program</span>
+              </div>
+              <div class="academic-school">Wharton Executive Education &bull; University of Pennsylvania</div>
+              <div class="academic-focus">Executive technology strategy, enterprise scale &amp; organizational governance</div>
+            </div>
+
+            <div class="academic-item">
+              <div class="academic-degree">
+                <span>Master of Business Administration (MBA)</span>
+              </div>
+              <div class="academic-school">Stuart School of Business &bull; Illinois Institute of Technology</div>
+              <div class="academic-focus">Enterprise strategy, business leadership &amp; operational economics</div>
+            </div>
+
+            <div class="academic-item">
+              <div class="academic-degree">
+                <span>Master of Science in Information Science (MSIS)</span>
+              </div>
+              <div class="academic-school">University of Arkansas at Little Rock</div>
+              <div class="academic-focus">Advanced data modeling, information architecture &amp; lifecycle systems</div>
+            </div>
+
+            <div class="academic-item">
+              <div class="academic-degree">
+                <span>Bachelor of Science in Bioengineering</span>
+              </div>
+              <div class="academic-school">University of Illinois Chicago (UIC)</div>
+              <div class="academic-focus">Foundational systems engineering, quantitative models &amp; analytical methods</div>
+            </div>
+          </div>
+
+          <div class="cred-footer-link">
+            <a href="https://www.linkedin.com/in/nusrathmohammed" target="_blank" rel="noopener noreferrer" class="cred-verify-link">
+              <span>View Verified Profiles on LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
